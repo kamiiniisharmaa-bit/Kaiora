@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kaiōra | Artisanal Living Emporium</title>
+    <!-- Google Fonts: Modern serif + clean sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FCF9F4;
+            color: #241F1A;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== HEADER ===== */
+        .promo-ribbon {
+            background: #1F2E2A;
+            color: #F3E9DE;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+            font-weight: 500;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid #EADDCB;
+        }
+
+        /* UNIQUE BRAND NAME: Kaiōra */
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.3rem;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2D4A3E;
+        }
+        .logo i {
+            font-size: 1.9rem;
+            color: #C47A44;
+        }
+        .logo span {
+            background: linear-gradient(135deg, #2D4A3E, #BE6A3C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2C3E34;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #BE6A3C;
+        }
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+        }
+        .nav-icons i {
+            cursor: pointer;
+            transition: color 0.2s;
+            color: #2C3E34;
+        }
+        .nav-icons i:hover {
+            color: #BE6A3C;
+        }
+
+        /* hero section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 3rem 0 4rem 0;
+        }
+        .hero-text {
+            flex: 1.2;
+        }
+        .hero-text .badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #EADDCB;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #5E3A2B;
+        }
+        .hero-text h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 3.5rem;
+            margin: 1rem 0 1rem 0;
+            line-height: 1.2;
+            color: #241F1A;
+        }
+        .hero-text p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #4A3F36;
+            max-width: 85%;
+            margin-bottom: 2rem;
+        }
+        .btn-primary {
+            background: #2D4A3E;
+            border: none;
+            padding: 0.9rem 2rem;
+            color: white;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary:hover {
+            background: #BE6A3C;
+            transform: translateY(-2px);
+        }
+        .hero-image {
+            flex: 1;
+            background: #E9DFD1;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        /* featured categories */
+        .section-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2rem;
+            margin: 2rem 0 1rem 0;
+            text-align: center;
+            color: #241F1A;
+        }
+        .section-sub {
+            text-align: center;
+            color: #6E5C4E;
+            margin-bottom: 2rem;
+            letter-spacing: 0.3px;
+        }
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0 3rem;
+        }
+        .category-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.5rem 0.5rem;
+            text-align: center;
+            transition: all 0.25s ease;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+            border: 1px solid #F0E4D6;
+            cursor: pointer;
+        }
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.08);
+            border-color: #DBCBB8;
+        }
+        .category-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .category-card h4 {
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        /* featured products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+        .product-card {
+            background: #FFFFFF;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: 0.2s;
+            border: 1px solid #F1E5DA;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 24px -12px rgba(60, 40, 28, 0.12);
+        }
+        .product-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            background: #F4EDE4;
+            display: block;
+        }
+        .product-info {
+            padding: 1.2rem;
+        }
+        .product-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .product-price {
+            color: #BE6A3C;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+        .rating {
+            color: #E6B85C;
+            font-size: 0.8rem;
+            margin: 0.4rem 0;
+        }
+        .add-to-cart {
+            background: #F3ECE4;
+            border: none;
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 0.8rem;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .add-to-cart:hover {
+            background: #2D4A3E;
+            color: white;
+        }
+
+        /* testimonial & unique vibe */
+        .testimonial {
+            background: #2C3E34;
+            border-radius: 48px;
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            color: #FCF9F4;
+            text-align: center;
+        }
+        .testimonial i {
+            font-size: 2.5rem;
+            opacity: 0.6;
+        }
+        .testimonial p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 1rem auto;
+            font-style: italic;
+        }
+
+        /* footer */
+        footer {
+            background: #1F2823;
+            color: #D9CDBC;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-col h4 {
+            font-family: 'Instrument Serif', serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-col p, .footer-col a {
+            color: #C6B59F;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        .social-icons i {
+            font-size: 1.3rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 800px) {
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero-text p { max-width: 100%; }
+            .navbar { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="promo-ribbon">
+    ✦ Free worldwide shipping on orders over $75 ✦   Complimentary gift wrap available ✦
+</div>
+
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-feather-alt"></i>
+            <span>kaiōra</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-icons">
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-bag-shopping"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section with working image (Unsplash high-quality) -->
+    <div class="hero">
+        <div class="hero-text">
+            <div class="badge">✦ Limited Edition ✦</div>
+            <h1>Where soul meets<br>craft & comfort.</h1>
+            <p>Kaiōra blends timeless design with natural textures. Discover heirloom-quality pieces, slow-made ceramics, and mindful essentials.</p>
+            <button class="btn-primary">Explore collection <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.pexels.com/photos/5705091/pexels-photo-5705091.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&fit=crop" alt="Artisan ceramic vase and textile decor" loading="eager">
+        </div>
+    </div>
+
+    <!-- Categories Section (all images working from reliable CDN / Pexels) -->
+    <div class="section-title">Wander through worlds</div>
+    <div class="section-sub">handpicked collections for modern rituals</div>
+    <div class="categories-grid">
+        <div class="category-card">
+            <img src="https://images.pexels.com/photos/920177/pexels-photo-920177.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop" alt="Ceramics">
+            <h4>Ceramics</h4>
+            <p>Stoneware & raku</p>
+        </div>
+        <div class="category-card">
+            <img src="https://images.pexels.com/photos/2988637/pexels-photo-2988637.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop" alt="Textiles">
+            <h4>Textiles</h4>
+            <p>Linen & wool throws</p>
+        </div>
+        <div class="category-card">
+            <img src="https://images.pexels.com/photos/2564799/pexels-photo-2564799.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop" alt="Apothecary">
+            <h4>Apothecary</h4>
+            <p>Candles & oils</p>
+        </div>
+        <div class="category-card">
+            <img src="https://images.pexels.com/photos/3757657/pexels-photo-3757657.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop" alt="Wood objects">
+            <h4>Woodcraft</h4>
+            <p>Hand-carved tools</p>
+        </div>
+    </div>
+
+    <!-- Featured Products: all product images working & properly shown -->
+    <div class="section-title">Editors' picks</div>
+    <div class="section-sub">beloved by the Kaiōra community</div>
+    <div class="products-grid">
+        <div class="product-card">
+            <img class="product-img" src="https://images.pexels.com/photos/1927612/pexels-photo-1927612.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Handmade sculptural vase">
+            <div class="product-info">
+                <div class="product-title">Drift Vase · Terracotta</div>
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <div class="product-price">$68 USD</div>
+                <button class="add-to-cart"><i class="fas fa-bag-shopping"></i> Add to cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img class="product-img" src="https://images.pexels.com/photos/3064782/pexels-photo-3064782.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Wool knit blanket">
+            <div class="product-info">
+                <div class="product-title">Hearth Blanket · Oat</div>
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="product-price">$129 USD</div>
+                <button class="add-to-cart"><i class="fas fa-bag-shopping"></i> Add to cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img class="product-img" src="https://images.pexels.com/photos/4198124/pexels-photo-4198124.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Soy wax candle">
+            <div class="product-info">
+                <div class="product-title">Ember Labdanum Candle</div>
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="product-price">$44 USD</div>
+                <button class="add-to-cart"><i class="fas fa-bag-shopping"></i> Add to cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img class="product-img" src="https://images.pexels.com/photos/2069592/pexels-photo-2069592.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Hand-carved wooden bowl">
+            <div class="product-info">
+                <div class="product-title">Monk’s Bowl · Walnut</div>
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="product-price">$92 USD</div>
+                <button class="add-to-cart"><i class="fas fa-bag-shopping"></i> Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Another lifestyle image banner - fully working -->
+    <div style="margin: 2rem 0 1rem; border-radius: 32px; overflow: hidden;">
+        <img src="https://images.pexels.com/photos/7079629/pexels-photo-7079629.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop" alt="Nordic interior with pottery" style="width:100%; display: block; height: auto; max-height: 320px; object-fit: cover;">
+    </div>
+
+    <!-- Unique testimonial for brand voice -->
+    <div class="testimonial">
+        <i class="fas fa-leaf"></i>
+        <p>“Kaiōra redefines slowness — every piece carries a story, every texture feels like coming home. The curation is unlike anything I’ve experienced.”</p>
+        <p style="font-size: 0.9rem; margin-top: 1rem;">— M. Chen, product designer</p>
+    </div>
+
+    <!-- Newsletter signup & values -->
+    <div style="background: #EAE1D5; border-radius: 36px; padding: 2rem 2rem; margin: 1rem 0 2rem; text-align: center;">
+        <h3 style="font-family: 'Instrument Serif', serif; font-size: 1.8rem;">become a keeper of kaiōra</h3>
+        <p style="margin: 0.8rem 0;">Join for early access + 15% off first ritual order</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 1.5rem;">
+            <input type="email" placeholder="Your email address" style="padding: 0.8rem 1.5rem; border-radius: 60px; border: none; width: 260px; font-family: inherit;">
+            <button class="btn-primary" style="background: #1F2E2A;">Subscribe →</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-col">
+            <h4>kaiōra</h4>
+            <p>Slow living archive<br>Since 2022 · Portland & Kyoto</p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <p>All objects<br>Journal<br>Studio visits</p>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <p>Shipping & returns<br>Gift registry<br>FAQ</p>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-snapchat"></i>
+            </div>
+            <p style="margin-top: 1rem;">hello@kaiora.com</p>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; margin-top: 2rem; font-size: 0.75rem; border-top: 1px solid #3f4a44; padding-top: 1.5rem;">
+        © 2025 Kaiōra — Artisanal essence. All images sustainably sourced.
+    </div>
+</footer>
+
+<!-- simple interactive add-to-cart alerts to demonstrate functionality -->
+<script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const productCard = button.closest('.product-card');
+            const productName = productCard.querySelector('.product-title').innerText;
+            alert(`✨ Added to cart: ${productName} — your Kaiōra ritual awaits.`);
+        });
+    });
+    document.querySelector('.btn-primary')?.addEventListener('click', () => {
+        alert('Discover the full Kaiōra collection → new arrivals each solstice.');
+    });
+    document.querySelector('.nav-icons .fa-bag-shopping')?.addEventListener('click', () => {
+        alert('Your bag is ready for mindful curation.');
+    });
+    document.querySelector('.promo-ribbon')?.addEventListener('click', () => {
+        console.log('Promo ribbon special');
+    });
+</script>
+</body>
+</html>

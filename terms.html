@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kaiōra · Terms & Conditions | Artisanal Living</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FCF9F4;
+            color: #241F1A;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* header / nav (matching home page style) */
+        .promo-ribbon {
+            background: #1F2E2A;
+            color: #F3E9DE;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+            font-weight: 500;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid #EADDCB;
+        }
+
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2D4A3E;
+        }
+        .logo i {
+            font-size: 1.8rem;
+            color: #C47A44;
+        }
+        .logo span {
+            background: linear-gradient(135deg, #2D4A3E, #BE6A3C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2C3E34;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #BE6A3C;
+        }
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+            color: #2C3E34;
+        }
+        .nav-icons i {
+            cursor: pointer;
+        }
+
+        /* terms hero section */
+        .terms-hero {
+            background: linear-gradient(120deg, #F1EBE2 0%, #FCF9F4 100%);
+            border-radius: 32px;
+            margin: 2rem 0 2rem 0;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 1px solid #EADDCB;
+        }
+        .terms-hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: #2D4A3E;
+        }
+        .terms-hero p {
+            max-width: 700px;
+            margin: 0.8rem auto 0;
+            color: #5C4C3C;
+        }
+        .last-updated {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            background: #EADDCB;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+        }
+
+        /* main terms content */
+        .terms-content {
+            background: #FFFFFF;
+            border-radius: 32px;
+            padding: 2rem 2.5rem;
+            margin: 1.5rem 0 3rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EFE5DB;
+        }
+        .terms-section {
+            margin-bottom: 2rem;
+            scroll-margin-top: 20px;
+        }
+        .terms-section h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2D4A3E;
+            border-left: 4px solid #C47A44;
+            padding-left: 1rem;
+        }
+        .terms-section h3 {
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            color: #3E2F24;
+        }
+        .terms-section p {
+            margin-bottom: 0.8rem;
+            color: #3F3329;
+        }
+        .terms-section ul, .terms-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+            color: #3F3329;
+        }
+        .terms-section li {
+            margin-bottom: 0.4rem;
+        }
+        .highlight-box {
+            background: #F9F4EC;
+            border-radius: 20px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.2rem 0;
+            border-left: 4px solid #BE6A3C;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border: 0;
+            height: 1px;
+            background: #EADDCB;
+        }
+
+        /* back to shop button */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2D4A3E;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0.5rem 0 2rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #BE6A3C;
+            transform: translateY(-2px);
+        }
+
+        /* footer (consistent) */
+        footer {
+            background: #1F2823;
+            color: #D9CDBC;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-col h4 {
+            font-family: 'Instrument Serif', serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-col p, .footer-col a {
+            color: #C6B59F;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        .social-icons i {
+            font-size: 1.3rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 750px) {
+            .terms-content { padding: 1.5rem; }
+            .terms-hero h1 { font-size: 2rem; }
+            .navbar { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="promo-ribbon">
+    ✦ mindful commerce · transparency & care ✦
+</div>
+
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-feather-alt"></i>
+            <span>kaiōra</span>
+        </div>
+        <div class="nav-links">
+           <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-icons">
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-bag-shopping"></i>
+        </div>
+    </nav>
+
+    <!-- Terms hero area -->
+    <div class="terms-hero">
+        <h1>Terms & Conditions</h1>
+        <p>Welcome to Kaiōra — a space where heritage, craft, and conscious commerce meet. These terms govern your use of our website and the purchase of our artisanal goods.</p>
+        <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 10, 2026</div>
+    </div>
+
+    <!-- Main terms content: detailed and legally inspired -->
+    <div class="terms-content">
+        <div class="terms-section" id="agreement">
+            <h2>1. Agreement to Terms</h2>
+            <p>By accessing or using the Kaiōra website (the "Site") or purchasing any products, you agree to be bound by these Terms & Conditions, our Privacy Policy, and any additional terms applicable to specific services. If you do not agree with any part of these terms, you must not use our website or services. Kaiōra ("we", "us", "our") reserves the right to update or modify these terms at any time without prior notice. Your continued use after changes constitutes acceptance.</p>
+        </div>
+
+        <div class="terms-section" id="products">
+            <h2>2. Artisan Products & Availability</h2>
+            <p>All products featured on Kaiōra are crafted by independent artisans, small-batch studios, and heritage workshops. Due to the handcrafted nature:</p>
+            <ul>
+                <li>Slight variations in color, size, and texture are celebrated as marks of authenticity.</li>
+                <li>Product images are for illustrative purposes; actual pieces may differ marginally.</li>
+                <li>We strive for accurate on-screen representation, but screen settings affect perception.</li>
+                <li>Inventory is limited and often one-of-a-kind. If an item becomes unavailable after your order, we will notify you within 2 business days and offer a full refund or exchange.</li>
+            </ul>
+        </div>
+
+        <div class="terms-section" id="purchases">
+            <h2>3. Orders & Payment</h2>
+            <p>When you place an order on Kaiōra, you receive an email confirmation acknowledging your request. We reserve the right to accept or decline any order for any reason (e.g., product unavailability, pricing error, or suspicion of fraudulent activity).</p>
+            <ul>
+                <li><strong>Pricing:</strong> All prices are in USD and exclude applicable taxes and shipping fees, which will be calculated at checkout.</li>
+                <li><strong>Payment methods:</strong> We accept major credit cards (Visa, Mastercard, Amex), PayPal, and Shop Pay. Your payment information is processed securely via PCI-compliant gateways.</li>
+                <li><strong>Billing accuracy:</strong> You agree to provide current, complete, and accurate purchase and account information.</li>
+            </ul>
+            <div class="highlight-box">
+                <i class="fas fa-hand-holding-heart" style="margin-right: 8px; color:#BE6A3C;"></i> <strong>Ethical commerce pledge:</strong> A portion of every purchase supports artisan communities and slow fashion initiatives.
+            </div>
+        </div>
+
+        <div class="terms-section" id="shipping">
+            <h2>4. Shipping, Delivery & Risk of Loss</h2>
+            <p>We ship worldwide with eco-conscious packaging. Estimated delivery times are provided at checkout but are not guaranteed. Ownership and risk of loss pass to you once the carrier accepts the package. Kaiōra is not liable for delays caused by customs, natural events, or carrier service disruptions. For lost or damaged items, please contact us within 14 days.</p>
+            <p><strong>International Orders:</strong> You are responsible for any customs duties, import taxes, or brokerage fees levied by your destination country.</p>
+        </div>
+
+        <div class="terms-section" id="returns">
+            <h2>5. Returns, Exchanges & Repairs</h2>
+            <p>We want you to love your Kaiōra pieces. If you are unsatisfied, we offer:</p>
+            <ul>
+                <li><strong>Standard returns:</strong> Within 30 days of delivery, in unused condition and original packaging. Return shipping is covered by the customer unless the item arrived damaged/defective.</li>
+                <li><strong>Exchanges:</strong> Subject to stock availability. Please initiate via our return portal.</li>
+                <li><strong>Repair service:</strong> For broken ceramics or wooden items, we partner with local artisans to offer repairs at a minimal cost. Email <a href="#" style="color:#BE6A3C;">care@kaiora.com</a> for assessment.</li>
+            </ul>
+            <p>Refunds will be processed to the original payment method within 10 business days after we receive the returned product.</p>
+        </div>
+
+        <div class="terms-section" id="intellectual">
+            <h2>6. Intellectual Property</h2>
+            <p>All content on this Site — including photography, illustrations, product descriptions, logos, and the Kaiōra name — is the exclusive property of Kaiōra or its licensors. You may not reproduce, distribute, or commercially exploit any material without our written permission. However, you are welcome to share images for personal, non-commercial use with proper credit (@kaiora).</p>
+        </div>
+
+        <div class="terms-section" id="user-conduct">
+            <h2>7. User Conduct & Reviews</h2>
+            <p>We encourage you to share feedback, reviews, and photos of your Kaiōra pieces. By submitting content, you grant us a non-exclusive, royalty-free license to feature it on our Site or social media. You agree not to post:</p>
+            <ul>
+                <li>Illegal, defamatory, or abusive content.</li>
+                <li>Spam, promotional links, or false information.</li>
+                <li>Impersonation of others or violation of privacy rights.</li>
+            </ul>
+            <p>We reserve the right to remove any content that violates these standards.</p>
+        </div>
+
+        <div class="terms-section" id="limitation">
+            <h2>8. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, Kaiōra and its partners shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Site or products purchased, including but not limited to loss of profits or data. Our total liability shall not exceed the amount you paid for the product giving rise to the claim. Some jurisdictions do not allow limitations on incidental damages, so this may not apply to you.</p>
+        </div>
+
+        <div class="terms-section" id="disclaimer">
+            <h2>9. Disclaimer of Warranties</h2>
+            <p>THE SITE AND ALL PRODUCTS ARE PROVIDED “AS IS” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED OR ERROR-FREE, NOR DO WE MAKE ANY WARRANTY REGARDING THE QUALITY, ACCURACY, OR RELIABILITY OF ANY PRODUCT DESCRIPTIONS. However, nothing in this disclaimer affects your statutory rights as a consumer.</p>
+        </div>
+
+        <div class="terms-section" id="governing-law">
+            <h2>10. Governing Law & Dispute Resolution</h2>
+            <p>These Terms are governed by the laws of the State of Oregon, without regard to conflict of laws principles. Any dispute arising from or relating to these Terms shall first be attempted to be resolved through good-faith negotiation. If unresolved, disputes shall be settled by binding arbitration in Portland, Oregon, in accordance with the rules of the American Arbitration Association. You agree to waive any right to participate in a class-action lawsuit.</p>
+        </div>
+
+        <div class="terms-section" id="contact">
+            <h2>11. Contact Information</h2>
+            <p>For questions about these Terms, returns, or any other inquiry, please reach out:</p>
+            <p><i class="fas fa-envelope" style="color:#C47A44; width: 24px;"></i> legal@kaiora.com &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-phone-alt"></i> +1 (503) 786-3420</p>
+            <p><i class="fas fa-map-pin"></i> Kaiōra Atelier, 201 SE Morrison St, Portland, OR 97214</p>
+        </div>
+
+        <hr>
+
+        <!-- additional consumer note -->
+        <div class="highlight-box" style="background: #F0EBE2;">
+            <i class="fas fa-seedling"></i> <strong>Slow commerce promise:</strong> We aim to be transparent and fair. These terms protect both you and our maker community. Thank you for being part of the Kaiōra journey — where every object holds meaning.
+        </div>
+    </div>
+
+    <!-- back to homepage simulation -->
+    <div style="text-align: center; margin: 0.5rem 0 2rem;">
+        <a href="#" class="back-link" id="backToShopBtn"><i class="fas fa-arrow-left"></i> Return to Kaiōra Home</a>
+    </div>
+</div>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-col">
+            <h4>kaiōra</h4>
+            <p>Slow living archive<br>Since 2022 · Portland & Kyoto</p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <p>All objects<br>Journal<br>Studio visits</p>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <p>Shipping & returns<br>Gift registry<br>FAQ</p>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-snapchat"></i>
+            </div>
+            <p style="margin-top: 1rem;">hello@kaiora.com</p>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; margin-top: 2rem; font-size: 0.75rem; border-top: 1px solid #3f4a44; padding-top: 1.5rem;">
+        © 2025 Kaiōra — Artisanal essence. All images sustainably sourced. | <a href="#" style="color:#C6B59F;">Terms</a> | <a href="#" style="color:#C6B59F;">Privacy</a>
+    </div>
+</footer>
+
+<script>
+    // Interactive elements: simple alerts for demo (consistent with homepage feel)
+    document.querySelectorAll('.nav-icons i, .social-icons i').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            alert('Kaiōra • This is a demo experience. Thank you for exploring our Terms page.');
+        });
+    });
+    const backBtn = document.getElementById('backToShopBtn');
+    if(backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('✨ Returning to the Kaiōra emporium — where timeless objects await. (Demo navigation)');
+            // In a real implementation this would link to index.html
+        });
+    }
+    // Add small highlight for internal anchor links (smooth behavior)
+    document.querySelectorAll('.terms-section h2, .terms-section h3').forEach(head => {
+        if(head.id) {
+            head.style.cursor = "pointer";
+            head.addEventListener('click', () => {
+                const id = head.getAttribute('id');
+                if(id) {
+                    window.location.hash = id;
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

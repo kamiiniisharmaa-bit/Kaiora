@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kaiōra · Privacy Pledge | Artisanal Living</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FCF9F4;
+            color: #241F1A;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* header / nav (matching brand identity) */
+        .promo-ribbon {
+            background: #1F2E2A;
+            color: #F3E9DE;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+            font-weight: 500;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid #EADDCB;
+        }
+
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2D4A3E;
+        }
+        .logo i {
+            font-size: 1.8rem;
+            color: #C47A44;
+        }
+        .logo span {
+            background: linear-gradient(135deg, #2D4A3E, #BE6A3C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2C3E34;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #BE6A3C;
+        }
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+            color: #2C3E34;
+        }
+        .nav-icons i {
+            cursor: pointer;
+        }
+
+        /* privacy hero section */
+        .privacy-hero {
+            background: linear-gradient(135deg, #F1EBE2 0%, #FCF9F4 100%);
+            border-radius: 32px;
+            margin: 2rem 0 2rem 0;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 1px solid #EADDCB;
+        }
+        .privacy-hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: #2D4A3E;
+        }
+        .privacy-hero p {
+            max-width: 700px;
+            margin: 0.8rem auto 0;
+            color: #5C4C3C;
+        }
+        .last-updated {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            background: #EADDCB;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+        }
+
+        /* main privacy content */
+        .privacy-content {
+            background: #FFFFFF;
+            border-radius: 32px;
+            padding: 2rem 2.5rem;
+            margin: 1.5rem 0 3rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EFE5DB;
+        }
+        .privacy-section {
+            margin-bottom: 2rem;
+            scroll-margin-top: 20px;
+        }
+        .privacy-section h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2D4A3E;
+            border-left: 4px solid #C47A44;
+            padding-left: 1rem;
+        }
+        .privacy-section h3 {
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            color: #3E2F24;
+        }
+        .privacy-section p {
+            margin-bottom: 0.8rem;
+            color: #3F3329;
+        }
+        .privacy-section ul, .privacy-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+            color: #3F3329;
+        }
+        .privacy-section li {
+            margin-bottom: 0.4rem;
+        }
+        .highlight-box {
+            background: #F9F4EC;
+            border-radius: 20px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.2rem 0;
+            border-left: 4px solid #BE6A3C;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border: 0;
+            height: 1px;
+            background: #EADDCB;
+        }
+        .cookie-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .cookie-type {
+            background: #F4EDE4;
+            border-radius: 16px;
+            padding: 0.8rem 1.2rem;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        /* back to shop button */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2D4A3E;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0.5rem 0 2rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #BE6A3C;
+            transform: translateY(-2px);
+        }
+
+        /* footer */
+        footer {
+            background: #1F2823;
+            color: #D9CDBC;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-col h4 {
+            font-family: 'Instrument Serif', serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .footer-col p, .footer-col a {
+            color: #C6B59F;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        .social-icons i {
+            font-size: 1.3rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 750px) {
+            .privacy-content { padding: 1.5rem; }
+            .privacy-hero h1 { font-size: 2rem; }
+            .navbar { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="promo-ribbon">
+    ✦ your privacy is sacred · we protect it like heirloom craft ✦
+</div>
+
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-feather-alt"></i>
+            <span>kaiōra</span>
+        </div>
+        <div class="nav-links">
+           <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-icons">
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-bag-shopping"></i>
+        </div>
+    </nav>
+
+    <!-- Privacy hero area -->
+    <div class="privacy-hero">
+        <h1>Privacy Pledge</h1>
+        <p>At Kaiōra, we honor the trust you place in us. This policy explains how we collect, use, and safeguard your information — because transparency is the foundation of mindful commerce.</p>
+        <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 10, 2026</div>
+    </div>
+
+    <!-- Main privacy content: comprehensive and GDPR/CCPA inspired -->
+    <div class="privacy-content">
+        <div class="privacy-section" id="introduction">
+            <h2>1. Our Commitment to You</h2>
+            <p>Kaiōra (“we”, “us”, “our”) operates the website kaiora.com (the “Site”). We are committed to protecting your personal data and respecting your privacy. This Privacy Policy describes the types of information we collect, how we use it, your rights, and the choices you have about your data. By using our Site or purchasing our artisanal products, you agree to the practices described herein.</p>
+            <div class="highlight-box">
+                <i class="fas fa-shield-alt" style="margin-right: 8px; color:#BE6A3C;"></i> <strong>Our core belief:</strong> Your data belongs to you. We never sell your personal information to third parties.
+            </div>
+        </div>
+
+        <div class="privacy-section" id="information-collect">
+            <h2>2. Information We Collect</h2>
+            <p>We collect only the information necessary to provide you with a seamless, secure, and personalized shopping experience:</p>
+            <ul>
+                <li><strong>Personal Identifiers:</strong> Name, email address, billing/shipping address, phone number — provided when you create an account, place an order, or subscribe to our newsletter.</li>
+                <li><strong>Payment Information:</strong> Credit card details or PayPal credentials are processed by secure third-party payment processors (Stripe, PayPal). Kaiōra never stores full payment card numbers.</li>
+                <li><strong>Order History:</strong> Details of products purchased, returns, and preferences to improve our offerings.</li>
+                <li><strong>Technical Data:</strong> IP address, browser type, device information, and cookies (see Section 6) for site functionality and analytics.</li>
+                <li><strong>Communication Data:</strong> Any correspondence you send to us via email, chat, or social media.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section" id="how-we-use">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use your data solely for legitimate business purposes, including:</p>
+            <ul>
+                <li>Processing and fulfilling your orders (shipping, payment confirmation, returns).</li>
+                <li>Sending essential service communications (order updates, delivery status).</li>
+                <li>Improving our Site, products, and customer service through analytics.</li>
+                <li>Sending marketing emails (only if you opt in) — featuring new artisan collections, seasonal stories, and exclusive offers. You can unsubscribe at any time.</li>
+                <li>Preventing fraud and enhancing security of our platform.</li>
+                <li>Complying with legal obligations (tax, anti-fraud regulations).</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section" id="sharing">
+            <h2>4. Sharing & Third Parties</h2>
+            <p>We never sell your personal data. However, we share information with trusted partners who help us operate:</p>
+            <ul>
+                <li><strong>Shipping carriers</strong> (USPS, DHL, FedEx) to deliver your order.</li>
+                <li><strong>Payment processors</strong> (Stripe, PayPal) to handle transactions securely.</li>
+                <li><strong>Email service provider</strong> (Klaviyo) to manage newsletters — only for opted-in users.</li>
+                <li><strong>Analytics partners</strong> (Google Analytics, Fathom) to improve user experience without collecting identifiable personal data beyond IP masking).</li>
+            </ul>
+            <p>All third-party providers are contractually bound to protect your information and use it only for specified services.</p>
+        </div>
+
+        <div class="privacy-section" id="cookies">
+            <h2>5. Cookies & Tracking Technologies</h2>
+            <p>We use cookies and similar technologies to enhance site navigation, analyze usage, and remember your preferences. You can control cookies via browser settings.</p>
+            <div class="cookie-grid">
+                <div class="cookie-type"><strong>Essential Cookies</strong><br>Necessary for checkout, security, and cart.</div>
+                <div class="cookie-type"><strong>Preference Cookies</strong><br>Remember language & region.</div>
+                <div class="cookie-type"><strong>Analytics Cookies</strong><br>Anonymous usage data (Google Analytics).</div>
+            </div>
+            <p>By continuing to use our Site, you consent to our use of cookies as described. You may disable non-essential cookies via our cookie banner at first visit.</p>
+        </div>
+
+        <div class="privacy-section" id="data-retention">
+            <h2>6. Data Retention & Security</h2>
+            <p>We retain your personal information only as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, or reporting requirements. Typically:</p>
+            <ul>
+                <li>Order data: 7 years (tax compliance).</li>
+                <li>Newsletter subscription data: until you unsubscribe.</li>
+                <li>Customer account data: until you request deletion.</li>
+            </ul>
+            <p>We implement industry-standard security measures (SSL encryption, firewalls, access controls) to protect against unauthorized access, alteration, or destruction of your data.</p>
+        </div>
+
+        <div class="privacy-section" id="your-rights">
+            <h2>7. Your Privacy Rights</h2>
+            <p>Depending on your location (e.g., GDPR for EU residents, CCPA for California), you may have the following rights:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete information.</li>
+                <li><strong>Right to Erasure (“Right to be Forgotten”):</strong> Request deletion of your data, subject to legal obligations.</li>
+                <li><strong>Right to Restrict Processing:</strong> Limit how we use your data.</li>
+                <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+                <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell data; however, you may opt-out of marketing emails via unsubscribe link.</li>
+            </ul>
+            <p>To exercise any of these rights, contact us at <strong>privacy@kaiora.com</strong>. We will respond within 30 days.</p>
+            <div class="highlight-box">
+                <i class="fas fa-euro-sign"></i> <strong>GDPR & CCPA compliance:</strong> If you are a resident of the European Economic Area or California, additional disclosures apply — please see our full legal notice or contact our Data Protection Officer.
+            </div>
+        </div>
+
+        <div class="privacy-section" id="children">
+            <h2>8. Children's Privacy</h2>
+            <p>Kaiōra does not knowingly collect personal information from children under 16 years of age. Our products are intended for adults. If we discover that a child has provided us with personal data, we will delete it immediately. Parents or guardians may contact us to request removal.</p>
+        </div>
+
+        <div class="privacy-section" id="third-party-links">
+            <h2>9. External Links</h2>
+            <p>Our Site may contain links to external websites (e.g., artisan profiles, payment gateways). We are not responsible for the privacy practices of those third parties. We encourage you to read their privacy policies.</p>
+        </div>
+
+        <div class="privacy-section" id="changes">
+            <h2>10. Updates to This Policy</h2>
+            <p>We may revise this Privacy Policy occasionally to reflect changes in legal requirements or our practices. The “Last updated” date at the top indicates when changes were made. We will notify you of material changes via email or a prominent notice on our Site.</p>
+        </div>
+
+        <div class="privacy-section" id="contact">
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions, concerns, or data requests, please reach out to our privacy team:</p>
+            <p><i class="fas fa-envelope" style="color:#C47A44; width: 24px;"></i> <strong>privacy@kaiora.com</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-phone-alt"></i> +1 (503) 786-3420</p>
+            <p><i class="fas fa-map-pin"></i> Kaiōra Atelier, 201 SE Morrison St, Portland, OR 97214, USA</p>
+            <p><strong>Data Protection Officer (DPO):</strong> Elena Hartwell, dpo@kaiora.com</p>
+        </div>
+
+        <hr>
+
+        <div class="highlight-box" style="background: #F0EBE2;">
+            <i class="fas fa-feather-alt"></i> <strong>Our promise:</strong> We believe privacy is not a feature — it’s a right. Every piece of data you share with Kaiōra is treated with the same care as the heirloom objects we curate. Thank you for trusting us.
+        </div>
+    </div>
+
+    <!-- back to homepage -->
+    <div style="text-align: center; margin: 0.5rem 0 2rem;">
+        <a href="#" class="back-link" id="backToShopBtn"><i class="fas fa-arrow-left"></i> Return to Kaiōra Home</a>
+    </div>
+</div>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-col">
+            <h4>kaiōra</h4>
+            <p>Slow living archive<br>Since 2022 · Portland & Kyoto</p>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <p>All objects<br>Journal<br>Studio visits</p>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <p>Shipping & returns<br>Gift registry<br>FAQ</p>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-snapchat"></i>
+            </div>
+            <p style="margin-top: 1rem;">hello@kaiora.com</p>
+        </div>
+    </div>
+    <div class="container" style="text-align: center; margin-top: 2rem; font-size: 0.75rem; border-top: 1px solid #3f4a44; padding-top: 1.5rem;">
+        © 2025 Kaiōra — Artisanal essence. All images sustainably sourced. | <a href="#" style="color:#C6B59F;">Terms</a> | <a href="#" style="color:#C6B59F;">Privacy</a>
+    </div>
+</footer>
+
+<script>
+    // Interactive elements: demo alerts for brand consistency
+    document.querySelectorAll('.nav-icons i, .social-icons i').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            alert('Kaiōra • Privacy is our priority. Explore our pledge with confidence.');
+        });
+    });
+    const backBtn = document.getElementById('backToShopBtn');
+    if(backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('✨ Returning to Kaiōra emporium — where your privacy is always respected.');
+        });
+    }
+    // Smooth anchor highlight behavior
+    document.querySelectorAll('.privacy-section h2').forEach(head => {
+        if(head.id) {
+            head.style.cursor = "pointer";
+            head.addEventListener('click', () => {
+                window.location.hash = head.id;
+            });
+        }
+    });
+    // Optional: Cookie consent simulation (demo only)
+    console.log("Kaiōra Privacy Page Loaded — Your data, your way.");
+</script>
+</body>
+</html>
